@@ -9,7 +9,7 @@ AppDataSource.initialize().then(() => {
   
   app.use(router);
   
-  app.listen(process.env.PORT, () => {
+  return app.listen(process.env.PORT, () => {
     console.log("🚀🚀 Server Started!!");
   })
 });

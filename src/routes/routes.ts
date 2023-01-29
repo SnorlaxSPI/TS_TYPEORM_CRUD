@@ -1,9 +1,8 @@
 import Router from 'express';
+import { DevsController } from '../controllers/DevsController';
 
 const router = Router();
 
-router.get('/', (request, response) => {
-  return response.json({ message: 'JSON'})
-});
+router.post('/devs', new DevsController().create);
 
 export { router };
