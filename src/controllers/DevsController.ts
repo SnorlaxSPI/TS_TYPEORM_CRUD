@@ -11,7 +11,8 @@ class DevsController {
 
     try {
       const newDevs = devsRepository.create({ name, developer });
-      console.log(newDevs);
+      await devsRepository.save(newDevs);
+      return response.status(201).json(newDevs);
       
     } catch(error) {
       console.log(error);

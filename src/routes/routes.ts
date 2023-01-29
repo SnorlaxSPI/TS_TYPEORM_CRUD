@@ -3,6 +3,10 @@ import { DevsController } from '../controllers/DevsController';
 
 const router = Router();
 
-router.post('/devs', new DevsController().create);
+const devdController = new DevsController();
+
+router.post('/devs', devdController.create);
+
+//router.post('/devs', new DevsController().create);
 
 export { router };
